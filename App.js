@@ -3,6 +3,12 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import { store, persistor } from './src/store';
 
+import 'setimmediate'
+
+if (!global.setImmediate) {
+  global.setImmediate = setTimeout
+}
+
 import MainStack from './src/navigators/MainStack';
 
 export default () => (

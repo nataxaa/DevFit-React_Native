@@ -80,7 +80,6 @@ const Page = (props) => {
             funnyPhrase = 'Virou o Arnold!!!'
             break
     }
-    console.log(funnyPhrase)
 
     return (
         <Container>
@@ -105,11 +104,11 @@ const Page = (props) => {
 }
 Page.navigationOptions = ({navigation}) => {
     const nextAction = () => {
-        if(!navigation.state.params || !navigation.state.params.workoutDays.lenght){
-            alert("Você precisa treinar pelo menos 1 dia!")
+        if(!navigation.state.params || !navigation.state.params.level){
+            alert("Você precisa escolher uma opção")
             return
         }
-            navigation.navigate('StarterNivel')
+            navigation.navigate('StarterRecommendations')
         
     }
     return{

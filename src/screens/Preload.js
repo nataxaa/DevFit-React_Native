@@ -3,13 +3,7 @@ import { connect } from 'react-redux';
 
 const Preload = (props) => {
     // TEMPORARIO
-    props.navigation.dispatch(StackActions.reset({
-        index:0,
-        actions:[
-            NavigationActions.navigate({routeName:'StarterStack'})
-        ]
-    }));
-    /*
+    
     if(!props.name) {
         // mandar para StarterStack
         props.navigation.dispatch(StackActions.reset({
@@ -26,7 +20,7 @@ const Preload = (props) => {
                 NavigationActions.navigate({routeName:'AppTab'})
             ]
         }));
-    }*/
+    }
 
     return null;
 }

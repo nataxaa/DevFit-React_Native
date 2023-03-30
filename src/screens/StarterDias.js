@@ -64,8 +64,6 @@ const Page = (props) => {
     
     let firsName = props.name.split(' ')[0]
 
-    console.log(props.workoutDays)
-
 
     return (
         <Container>
