@@ -4,11 +4,12 @@ const initialState = {
     workoutDays:[1], // 1-0
     myWorkouts:[],
     lastWorkout:'', // ID
-    dailyProgress:['2023-03-21', '2023-03-20']
+    dailyProgress:['2019-09-13', '2019-09-12']
 };
 
 export default (state = initialState, action) => {
     let myWorkouts = [...state.myWorkouts]
+    let dailyProgress = [...state.dailyProgress]
 
     switch(action.type) {
         case 'SET_NAME':
@@ -16,6 +17,9 @@ export default (state = initialState, action) => {
             break;
         case 'SET_WORKOUTDAYS':
             return {...state, workoutDays:action.payload.workoutDays};
+            break;
+        case 'SET_LASTWORKOUT':
+            return {...state, lastWorkout:action.payload.id}
             break;
         case 'SET_LEVEL':
             return {...state, level:action.payload.level};
